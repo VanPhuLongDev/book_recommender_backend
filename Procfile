@@ -1,0 +1,1 @@
+web: apt-get update && apt-get install -y ffmpeg libsm6 libxext6 && python app.py
