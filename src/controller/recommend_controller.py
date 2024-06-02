@@ -1,4 +1,4 @@
-from flask import Blueprint, request
+from flask import Blueprint, request,current_app,jsonify
 from src.service.recommend_service import recommender
 import numpy as np
 import pandas as pd
@@ -41,11 +41,19 @@ def predictTopK():
     return recommender(similar_user_id, topK)
 
 
-# @recommend.route('/predict-convmf', methods=['POST'])
-# def predictTopK_convmf():
-#     data = request.get_json()
-#     bookIds = data.get('book_ids')
-#     similar_user_id = find_similar_user(bookIds,model_knn,user_book_matrix)
-#     topK= data.get('topK')
-#     print(similar_user_id, topK)
-#     return recommender_convmf(similar_user_id, topK)
+@recommend.route('/predict-convmf', methods=['POST'])
+def predictTopK_convmf():
+    model = current_app.model
+    data = request.get_json()
+    bookIds = data.get('book_ids')
+    similar_user_id = find_similar_user(bookIds,model_knn,user_book_matrix)
+    topK= data.get('topK')
+    print(similar_user_id, topK)
+    recs,score_item = model.recommend(user_id="9", k=10)
+    print('recs controller: ',recs)
+    print(score_item)
+    return jsonify({
+                    "listBooks": recs,
+                    "message": "SUCCEESS",
+                    "status": 1
+                }), 201
