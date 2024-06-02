@@ -133,7 +133,11 @@ recommender = LightGCNRecommender("model_and_mappings.pth")
 
 # Define the predictTopK function
 def predictTopK(user_id, topK):
-    recommended_books = recommender.predict(user_id, topK)
+    recommended_books = None
+    try:
+        recommended_books = recommender.predict(user_id, topK)
+    except Exception as e:
+        print (e)
     return recommended_books
 
 
