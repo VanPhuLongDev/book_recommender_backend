@@ -19,12 +19,12 @@ class Phobert:
             self.tokenizer = AutoTokenizer.from_pretrained("vinai/phobert-base-v2")
             self.model = AutoModel.from_pretrained("vinai/phobert-base-v2")
 
-            stopwords_file = open('stop_words_Vietnamese.txt','r')
+            stopwords_file = open('stop_words_Vietnamese.txt','r',encoding='utf8')
             content = stopwords_file.read()
             stopwords_VN = content.splitlines()
             stopwords_file.close()
 
-            stopwords_file = open('stop_words_English.txt','r')
+            stopwords_file = open('stop_words_English.txt','r',encoding='utf8')
             content = stopwords_file.read()
             stopwords_EN = content.splitlines()
             stopwords_file.close()
