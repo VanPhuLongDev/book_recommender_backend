@@ -19,8 +19,9 @@ def addBook():
 @books.route('/relative', methods=['GET'])
 def getRelativeBooks():
     try:
-        book_id = request.args.get('book_id')
-        books = BookService().get_relative_books(book_id)
+        book_id = int(request.args.get('book_id'))
+        limit = int(request.args.get('limit'))
+        books = BookService().get_relative_books(book_id, limit)
         return jsonify(books), 200
     except Exception as e:
         print(e)
@@ -33,7 +34,8 @@ def getRelativeBooks():
 def getSemanticSearch():
     try:
         texts = request.args.get('texts')
-        books = BookService().get_semantic_search(texts)
+        limit = int(request.args.get('limit'))
+        books = BookService().get_semantic_search(texts,limit=limit)
         return jsonify(books), 200
     except Exception as e:
         print(e)

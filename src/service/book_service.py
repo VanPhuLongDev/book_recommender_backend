@@ -33,7 +33,7 @@ class BookService:
         result = self.collection.delete_one({"_id": book_id})
         return result.deleted_count
 
-    def get_relative_books(self, book_id,k=10):
+    def get_relative_books(self, book_id,limit=10):
         book = self.collection.find_one({"_id": book_id})
         embedding = book["embedding"]
 
@@ -44,7 +44,7 @@ class BookService:
                         "queryVector": embedding,
                         "path": "embedding",
                         "numCandidates": 150,
-                        "limit": k,
+                        "limit": limit,
                     },
             },
             {
@@ -62,7 +62,7 @@ class BookService:
         books = self.collection.aggregate(query)
         return list(books)
     
-    def get_semantic_search(self, texts,k=10):
+    def get_semantic_search(self, texts,limit=10):
         embedding = Phobert.get_instance().get_embedding(texts)
 
         query = [
@@ -72,7 +72,8 @@ class BookService:
                     "queryVector": embedding,
                     "path": "embedding",
                     "numCandidates": 150,
-                    "limit": k}
+                    "limit": limit,
+                    }
             },
             {
                 "$unset":"embedding",
