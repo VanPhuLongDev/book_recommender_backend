@@ -38,7 +38,12 @@ def predictTopK():
     similar_user_id = find_similar_user(bookIds,model_knn,user_book_matrix)
     topK= data.get('topK')
     print(similar_user_id, topK)
-    return recommender(similar_user_id, topK)
+    results = None
+    try:
+        results = recommender(similar_user_id, topK)
+    except Exception as e:
+        print (e)
+    return results
 
 
 # @recommend.route('/predict-convmf', methods=['POST'])
