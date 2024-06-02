@@ -8,7 +8,7 @@ import os
 recommend = Blueprint('recommend', __name__, url_prefix='/recommend')
 
 base_path = os.path.dirname(__file__)
-full_path = os.path.join(base_path, 'data_150k.txt')
+full_path = os.path.join(base_path, 'data.txt')
 rating_df = pd.read_csv(full_path, delimiter='\t', header=None, names=['userId', 'bookId', 'rating'])
 filtered_rating_df = rating_df[rating_df['rating'] >= 3]
 data = filtered_rating_df[["userId","bookId"]]
