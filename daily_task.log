@@ -1,0 +1,63 @@
+2024-06-12 21:19:10,501 - Tác vụ đã được thực thi!
+2024-06-12 21:19:10,501 - Bắt đầu huấn luyện mô hình 1.
+2024-06-12 21:19:15,502 - Huấn luyện mô hình 1 thành công.
+2024-06-12 21:19:15,502 - Bắt đầu huấn luyện mô hình 2.
+2024-06-12 21:19:20,504 - Huấn luyện mô hình 2 thành công.
+2024-06-12 21:33:13,788 - Tác vụ đã được thực thi!
+2024-06-12 21:36:20,939 - Tác vụ đã được thực thi!
+2024-06-12 21:36:20,939 - Bắt đầu huấn luyện mô hình LightGCN.
+2024-06-12 21:36:20,939 - Lỗi trong quá trình huấn luyện mô hình LightGCN: name 'trainModelLGCN' is not defined
+2024-06-12 21:36:20,941 - Bắt đầu huấn luyện mô hình 2.
+2024-06-12 21:36:25,942 - Huấn luyện mô hình 2 thành công.
+2024-06-12 21:38:30,280 - Tác vụ đã được thực thi!
+2024-06-12 21:38:30,280 - Bắt đầu huấn luyện mô hình LightGCN.
+2024-06-13 02:40:46,685 - Tác vụ đã được thực thi!
+2024-06-13 02:40:46,686 - Bắt đầu huấn luyện mô hình LightGCN.
+2024-06-13 02:40:46,687 - Huấn luyện mô hình LightGCN thành công.
+2024-06-13 02:40:46,688 - Bắt đầu huấn luyện mô hình 2.
+2024-06-13 02:40:48,455 - Starting training model ConvMF
+2024-06-13 02:41:02,266 - From D:\PBL7\automatic-scheduling\train_convmf_vn.py:6324: The name tf.disable_eager_execution is deprecated. Please use tf.compat.v1.disable_eager_execution instead.
+
+2024-06-13 02:41:02,274 - From D:\PBL7\automatic-scheduling\train_convmf_vn.py:6328: The name tf.logging.set_verbosity is deprecated. Please use tf.compat.v1.logging.set_verbosity instead.
+
+2024-06-13 02:41:09,647 - Epoch: 1
+2024-06-13 12:22:48,631 - Tác vụ đã được thực thi!
+2024-06-13 12:22:48,633 - Bắt đầu huấn luyện mô hình LightGCN.
+2024-06-13 12:23:05,936 - Lỗi trong quá trình huấn luyện mô hình LightGCN: name 'per' is not defined
+2024-06-13 12:23:05,940 - Bắt đầu huấn luyện mô hình 2.
+2024-06-13 12:23:08,496 - Starting training model ConvMF
+2024-06-13 12:23:27,978 - From D:\PBL7\automatic-scheduling\train_convmf_vn.py:6324: The name tf.disable_eager_execution is deprecated. Please use tf.compat.v1.disable_eager_execution instead.
+
+2024-06-13 12:23:27,986 - From D:\PBL7\automatic-scheduling\train_convmf_vn.py:6328: The name tf.logging.set_verbosity is deprecated. Please use tf.compat.v1.logging.set_verbosity instead.
+
+2024-06-13 12:23:35,773 - Epoch: 1
+2024-06-13 12:50:47,446 - Loss: 145434993.33862 Elapsed: 1631.6711s Converge: 14543499333861709854763550957935202410305229049426450841600.000000 
+2024-06-13 12:50:50,003 - Test dataset result: 
+2024-06-13 12:50:50,003 - 
+TEST:
+...
+       |   RMSE | Train (s) | Test (s)
+------ + ------ + --------- + --------
+ConvMF | 1.8441 | 1639.5731 |   0.6331
+
+2024-06-13 12:50:50,054 - Huấn luyện mô hình 2 thành công.
+2024-06-13 13:43:21,202 - Tác vụ đã được thực thi!
+2024-06-13 13:43:21,207 - Bắt đầu huấn luyện mô hình LightGCN.
+2024-06-13 13:43:34,068 - Lỗi trong quá trình huấn luyện mô hình LightGCN: name 'per' is not defined
+2024-06-13 13:43:34,069 - Bắt đầu huấn luyện mô hình 2.
+2024-06-13 13:43:35,616 - Starting training model ConvMF
+2024-06-13 13:43:48,153 - From D:\PBL7\api_server\book_recommender_backend\train_convmf_vn.py:6324: The name tf.disable_eager_execution is deprecated. Please use tf.compat.v1.disable_eager_execution instead.
+
+2024-06-13 13:43:48,158 - From D:\PBL7\api_server\book_recommender_backend\train_convmf_vn.py:6328: The name tf.logging.set_verbosity is deprecated. Please use tf.compat.v1.logging.set_verbosity instead.
+
+2024-06-13 13:43:54,068 - Epoch: 1
+2024-06-13 14:06:53,502 - Loss: 145434993.33862 Elapsed: 1379.4328s Converge: 14543499333861709854763550957935202410305229049426450841600.000000 
+2024-06-13 14:06:56,093 - Test dataset result: 
+2024-06-13 14:06:56,093 - 
+TEST:
+...
+       |   RMSE | Train (s) | Test (s)
+------ + ------ + --------- + --------
+ConvMF | 1.8441 | 1385.4115 |   0.6383
+
+2024-06-13 14:06:56,150 - Huấn luyện mô hình 2 thành công.
